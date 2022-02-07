@@ -64,7 +64,7 @@ class _LoginScreenState extends State<LoginScreen> with SingleTickerProviderStat
              decoration:  const BoxDecoration(
                shape: BoxShape.circle,
                //borderRadius: BorderRadius.circular(70),
-               color: kPrimaryColor,
+               color: kPrimaryColor1,
              ),
              ),
          ),
@@ -79,7 +79,7 @@ class _LoginScreenState extends State<LoginScreen> with SingleTickerProviderStat
               height: 200,
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(100),
-                color: kPrimaryColor,
+                color: kPrimaryColor1,
               ),
             ),
           ),
@@ -105,7 +105,7 @@ class _LoginScreenState extends State<LoginScreen> with SingleTickerProviderStat
                     });
                     },
                     icon:  Icon(Icons.close,
-                      color: kPrimaryColor,
+                      color: kPrimaryColor1,
                     ),
                 ),
               ),
@@ -199,9 +199,12 @@ class _LoginScreenState extends State<LoginScreen> with SingleTickerProviderStat
                         ),
                         const SizedBox(height: 40,),
                         RoundInput(icon:Icons.mail,hint: "Username",),
-                        RoundInput(icon:Icons.face,hint: "Name",),
-
                         RoundedPasswordInput(hint: "Password",),
+
+                        RoundedPasswordInput(hint: "Confirm Password",),
+
+                        //  RoundInput(icon:Icons.face,hint: "Name",),
+
                         const SizedBox(height: 10,),
                         RoundedButton(title: "SIGN UP",),
                       ],
@@ -244,8 +247,8 @@ Widget buildRegisterContainer(){
           child:isLogin ?
            Text("Don't have an account ? Sign up",
             style: TextStyle(
-              color: kPrimaryColor,
-              fontSize: 18,
+              color: kPrimaryColor1,
+              fontSize: 17,
             ),
           ):null
         ),

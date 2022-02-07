@@ -16,11 +16,11 @@ class RoundInput extends StatelessWidget {
   Widget build(BuildContext context) {
     return  InputContainer(
       child: TextField(
-        cursorColor: kPrimaryColor,
+        cursorColor: kPrimaryColor1,
         decoration: InputDecoration(
             icon: Icon(
               icon,
-              color: kPrimaryColor,
+              color: kPrimaryColor1,
             ),
             hintText: hint,
             border: InputBorder.none

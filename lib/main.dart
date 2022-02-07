@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:testing_login_page/Theme/colors.dart';
 import 'Screens/login.dart';
+import 'Screens/splash/splash_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -18,11 +19,12 @@ class MyApp extends StatelessWidget {
       title: 'Flutter Demo',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        primaryColor: kPrimaryColor,
+        primaryColor: kPrimaryColor1,
         textTheme: GoogleFonts.robotoTextTheme(Theme.of(context).textTheme),
         primarySwatch: Colors.blue,
       ),
-      home:const LoginScreen(),
+      home: SplashScreen(),
+      //home:const LoginScreen(),
     );
   }
 }

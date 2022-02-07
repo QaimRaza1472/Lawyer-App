@@ -14,11 +14,11 @@ class RoundedPasswordInput extends StatelessWidget {
   Widget build(BuildContext context) {
     return  InputContainer(
       child: TextField(
-        cursorColor: kPrimaryColor,
+        cursorColor: kPrimaryColor1,
         obscureText: true,
         decoration: InputDecoration(
             icon: Icon(Icons.lock,
-              color: kPrimaryColor,
+              color: kPrimaryColor1,
             ),
             hintText: hint,
             border: InputBorder.none

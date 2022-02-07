@@ -39,7 +39,7 @@ class _BackgroundScafoldState extends State<BackgroundWidget> {
             decoration:  const BoxDecoration(
               shape: BoxShape.circle,
               //borderRadius: BorderRadius.circular(70),
-              color: kPrimaryColor,
+              color: kPrimaryColor1,
             ),
           ),
         ),
@@ -55,7 +55,7 @@ class _BackgroundScafoldState extends State<BackgroundWidget> {
             height: 200,
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(100),
-              color: kPrimaryColor,
+              color: kPrimaryColor1,
             ),
           ),
         ),
