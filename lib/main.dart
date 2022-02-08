@@ -16,12 +16,12 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
+      title: 'Lawyer App',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
         primaryColor: kPrimaryColor1,
         textTheme: GoogleFonts.robotoTextTheme(Theme.of(context).textTheme),
-        primarySwatch: Colors.blue,
+        primarySwatch:Colors.grey,
       ),
       home: SplashScreen(),
       //home:const LoginScreen(),

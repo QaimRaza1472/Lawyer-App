@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:testing_login_page/Screens/testing.dart';
+import 'package:testing_login_page/Screens/forgot_password.dart';
 import 'package:testing_login_page/Theme/colors.dart';
 import 'Login/Components/rounded_button.dart';
 import 'Login/Components/rounded_input.dart';
@@ -143,11 +143,29 @@ class _LoginScreenState extends State<LoginScreen> with SingleTickerProviderStat
                       RoundInput(icon:Icons.mail,hint: "Username",),
                       RoundedPasswordInput(hint: "Password",),
 
-                      const SizedBox(height: 10,),
+                      //const SizedBox(height: 0,),
+                      Padding(
+                        padding:  EdgeInsets.only(right:width1*0.1),
+                        child: Align(
+                          alignment: Alignment.topRight,
+                          child: TextButton(
+                            onPressed: (){
+                              Navigator.push(context, MaterialPageRoute(builder: (context)=>ForgotPassword()));
+                            },
+                            child: Text("Forget Password",
+                              style: TextStyle(
+                                color: kPrimaryColor1
+
+                              ),
+                            ),
+                          ),
+                        ),
+                      ),
+                      //const SizedBox(height: 0,),
 
                       RoundedButton(title: "LOGIN",
                         pressd: (){
-                        Navigator.push(context, MaterialPageRoute(builder: (context)=>Testing()));
+                        //Navigator.push(context, MaterialPageRoute(builder: (context)=>ForgotPassword()));
                       },),
                     ],
                   ),
@@ -241,16 +259,27 @@ Widget buildRegisterContainer(){
             animationController.forward();
             setState(() {
               isLogin = !isLogin;
-
             });
           },
           child:isLogin ?
-           Text("Don't have an account ? Sign up",
-            style: TextStyle(
-              color: kPrimaryColor1,
-              fontSize: 17,
-            ),
-          ):null
+           Row(
+             mainAxisAlignment: MainAxisAlignment.center,
+             children: [
+               Text("Don't have an account ?",
+                style: TextStyle(
+                  color: kPrimaryColor1,
+                  fontSize: 17,
+                ),
+          ),
+               Text(" Sign up",
+                 style: TextStyle(
+                   color: kPrimaryColor1,
+                   fontSize: 18,
+                 fontWeight: FontWeight.bold,
+                 ),
+               ),
+             ],
+           ):null
         ),
       ),
     );

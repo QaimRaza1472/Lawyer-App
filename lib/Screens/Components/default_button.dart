@@ -14,19 +14,20 @@ class DefaultButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    var height1=MediaQuery.of(context).size;
+    var height1=MediaQuery.of(context).size.height;
     var width1=MediaQuery.of(context).size.width;
+    Size size =MediaQuery.of(context).size;
 
     return SizedBox(
 
       //width: double.infinity,
-      width: width1*0.85,
+      //width: width1*0.86,
+      width: size.width*0.86,
       height: getProportionateScreenHeight(52),
       child: TextButton(
         style: TextButton.styleFrom(
-          shape:
-              RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(27),
+          shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(26),
               ),
           primary: Colors.white,
           backgroundColor: kPrimaryColor1,
